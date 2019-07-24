@@ -2,7 +2,14 @@ pub struct Solution;
 
 impl Solution {
     pub fn max_sub_array(nums: Vec<i32>) -> i32 {
-        nums[0] // TODO
+        assert!(nums.len() > 0);
+        nums.into_iter()
+            .scan(-1, |s, x| {
+                *s = if *s < 0 { x } else { *s + x };
+                Some(*s)
+            })
+            .max()
+            .unwrap()
     }
 }
 
@@ -12,6 +19,9 @@ mod tests {
 
     #[test]
     fn test() {
-        assert_eq!(Solution::max_sub_array(vec![0]), 0);
+        assert_eq!(
+            Solution::max_sub_array(vec![-2, 1, -3, 4, -1, 2, 1, -5, 4]),
+            6
+        );
     }
 }
