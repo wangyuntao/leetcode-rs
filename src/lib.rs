@@ -9,3 +9,4 @@ pub mod p0100_same_tree;
 pub mod p0101_symmetric_tree;
 pub mod p0104_maximum_depth_of_binary_tree;
 pub mod p0121_best_time_to_buy_and_sell_stock;
+pub mod p0155_min_stack;
