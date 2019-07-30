@@ -11,3 +11,4 @@ pub mod p0104_maximum_depth_of_binary_tree;
 pub mod p0121_best_time_to_buy_and_sell_stock;
 pub mod p0155_min_stack;
 pub mod p0168_excel_sheet_column_title;
+pub mod p0258_add_digits;
