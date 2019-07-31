@@ -2,7 +2,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn max_sub_array(nums: Vec<i32>) -> i32 {
-        assert!(nums.len() > 0);
+        assert!(!nums.is_empty());
         nums.into_iter()
             .scan(-1, |s, x| {
                 *s = if *s < 0 { x } else { *s + x };

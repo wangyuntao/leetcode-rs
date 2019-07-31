@@ -1,3 +1,4 @@
+#[derive(Default)]
 pub struct MinStack {
     v: Vec<i32>,
     m: Option<i32>,
@@ -6,7 +7,7 @@ pub struct MinStack {
 impl MinStack {
     /** initialize your data structure here. */
     pub fn new() -> Self {
-        MinStack { v: vec![], m: None }
+        Default::default()
     }
 
     pub fn push(&mut self, x: i32) {
@@ -28,7 +29,7 @@ impl MinStack {
     }
 
     pub fn top(&self) -> i32 {
-        return self.v[self.v.len() - 1];
+        self.v[self.v.len() - 1]
     }
 
     pub fn get_min(&mut self) -> i32 {
